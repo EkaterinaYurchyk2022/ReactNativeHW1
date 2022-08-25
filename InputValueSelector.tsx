@@ -1,11 +1,15 @@
 import React from 'react';
-import {StyleSheet, TextInput} from 'react-native';
+import {Dimensions, StyleSheet, TextInput} from 'react-native';
 
 type IProps = {
     value: string
     onChangeText: (value: string) => void
     placeholder: string
 }
+
+const {width, height} = Dimensions.get('screen')
+const WIDTH = width
+const HEIGHT = height
 
 export const InputValueSelector = ({value, onChangeText, placeholder}: IProps) => {
     return (
@@ -22,12 +26,11 @@ export const InputValueSelector = ({value, onChangeText, placeholder}: IProps) =
 const styles = StyleSheet.create({
     input: {
         borderStyle: 'solid',
-        width: 350,
-        height: 38,
+        width: WIDTH-40,
+        height: HEIGHT/25,
         backgroundColor: 'darkgrey',
         marginLeft: 20,
-        alignItems: 'center',
-        margin: 5,
+        margin: 5
     }
 })
 
