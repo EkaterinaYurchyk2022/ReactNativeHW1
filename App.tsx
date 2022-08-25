@@ -1,8 +1,11 @@
 import {StatusBar} from 'expo-status-bar';
 import {StyleSheet, TextInput, TouchableOpacity, View, Text, Image, ImageBackground} from 'react-native';
+import {InputValueSelector} from './InputValueSelector';
+import {useState} from 'react';
 
 const image = {uri: 'https://atlasbus.by/static/background.jpg'}
 export default function App() {
+    const [value, setValue] = useState('')
     return (
         <View style={styles.container}>
             <ImageBackground source={image} resizeMode="cover" style={styles.image}>
@@ -14,71 +17,60 @@ export default function App() {
                     source={require('./assets/img/headerImg.png')
                     }
                 />
-                <TextInput
-                    style={{
-                        borderStyle: 'solid',
-                        width: 350,
-                        height: 38,
-                        backgroundColor: 'darkgrey',
-                        marginLeft: 20,
-                        alignItems: 'center'
-                    }}
-                    onChangeText={() => {
-                    }}
-                    value={''}
-                    placeholder="Откуда"
+                <InputValueSelector value={value} onChangeText={setValue} placeholder="Откуда"/>
+                <InputValueSelector value={value} onChangeText={setValue} placeholder="Куда"/>
+                <InputValueSelector value={value} onChangeText={setValue} placeholder="Дата"/>
+                <InputValueSelector value={value} onChangeText={setValue} placeholder="Количество пассажиров"/>
+                {/*<TextInput*/}
+                {/*    style={{*/}
+                {/*        borderStyle: 'solid',*/}
+                {/*        width: 350,*/}
+                {/*        height: 38,*/}
+                {/*        backgroundColor: 'darkgrey',*/}
+                {/*        marginLeft: 20,*/}
+                {/*        marginTop: 5,*/}
+                {/*        alignItems: 'center'*/}
+                {/*    }}*/}
+                {/*    onChangeText={() => {*/}
+                {/*    }}*/}
+                {/*    value={''}*/}
+                {/*    placeholder="Куда"*/}
 
-                />
-                <TextInput
-                    style={{
-                        borderStyle: 'solid',
-                        width: 350,
-                        height: 38,
-                        backgroundColor: 'darkgrey',
-                        marginLeft: 20,
-                        marginTop: 5,
-                        alignItems: 'center'
-                    }}
-                    onChangeText={() => {
-                    }}
-                    value={''}
-                    placeholder="Куда"
+                {/*/>*/}
+                {/*<View style={styles.bottomContainer}>*/}
+                {/*    <TextInput*/}
+                {/*        style={{*/}
+                {/*            borderStyle: 'solid',*/}
+                {/*            width: 350,*/}
+                {/*            height: 38,*/}
+                {/*            backgroundColor: 'darkgrey',*/}
+                {/*            marginLeft: 20,*/}
+                {/*            marginTop: 5,*/}
+                {/*            alignItems: 'center'*/}
+                {/*        }}*/}
+                {/*        onChangeText={() => {*/}
+                {/*        }}*/}
+                {/*        value={''}*/}
+                {/*        placeholder="Дата"*/}
 
-                />
-                <View style={styles.bottomContainer}>
-                    <TextInput
-                        style={{
-                            borderStyle: 'solid',
-                            width: 350,
-                            height: 38,
-                            backgroundColor: 'darkgrey',
-                            marginLeft: 20,
-                            marginTop: 5,
-                            alignItems: 'center'
-                        }}
-                        onChangeText={() => {
-                        }}
-                        value={''}
-                        placeholder="Дата"
+                {/*    />*/}
+                {/*    <TextInput*/}
+                {/*        style={{*/}
+                {/*            borderStyle: 'solid',*/}
+                {/*            width: 350,*/}
+                {/*            height: 38,*/}
+                {/*            backgroundColor: 'darkgrey',*/}
+                {/*            marginLeft: 20,*/}
+                {/*            marginTop: 5,*/}
+                {/*            alignItems: 'center'*/}
+                {/*        }}*/}
+                {/*        onChangeText={() => {*/}
+                {/*        }}*/}
+                {/*        value={''}*/}
+                {/*        placeholder="Количество пассажиров"*/}
 
-                    />
-                    <TextInput
-                        style={{
-                            borderStyle: 'solid',
-                            width: 350,
-                            height: 38,
-                            backgroundColor: 'darkgrey',
-                            marginLeft: 20,
-                            marginTop: 5,
-                            alignItems: 'center'
-                        }}
-                        onChangeText={() => {
-                        }}
-                        value={''}
-                        placeholder="Пассажиры"
-
-                    />
-                </View>
+                {/*    />*/}
+                {/*</View>*/}
                 <TouchableOpacity
                     style={{
                         alignItems: 'center',
@@ -92,8 +84,8 @@ export default function App() {
                 >
                     <Text style={{color: 'white'}}>Найти</Text>
                 </TouchableOpacity>
-                <StatusBar style="auto"/>
             </ImageBackground>
+            <StatusBar style="auto"/>
         </View>
     );
 }
@@ -105,7 +97,7 @@ const styles = StyleSheet.create({
     image: {
         flex: 1,
         justifyContent: 'center',
-        position: 'relative'
+
     },
     text: {
         color: 'white',
@@ -115,5 +107,5 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         backgroundColor: '#000000c0'
     },
-    bottomContainer: {}
+
 });
