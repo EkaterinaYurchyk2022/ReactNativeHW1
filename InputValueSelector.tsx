@@ -26,8 +26,8 @@ export const InputValueSelector = ({value, onChangeText, placeholder}: IProps) =
 const styles = StyleSheet.create({
     input: {
         borderStyle: 'solid',
-        width: WIDTH-40,
-        height: HEIGHT/25,
+        width: WIDTH - 40,
+        height: HEIGHT / 25,
         backgroundColor: 'darkgrey',
         marginLeft: 20,
         margin: 5
