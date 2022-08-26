@@ -21,56 +21,7 @@ export default function App() {
                 <InputValueSelector value={value} onChangeText={setValue} placeholder="Куда"/>
                 <InputValueSelector value={value} onChangeText={setValue} placeholder="Дата"/>
                 <InputValueSelector value={value} onChangeText={setValue} placeholder="Количество пассажиров"/>
-                {/*<TextInput*/}
-                {/*    style={{*/}
-                {/*        borderStyle: 'solid',*/}
-                {/*        width: 350,*/}
-                {/*        height: 38,*/}
-                {/*        backgroundColor: 'darkgrey',*/}
-                {/*        marginLeft: 20,*/}
-                {/*        marginTop: 5,*/}
-                {/*        alignItems: 'center'*/}
-                {/*    }}*/}
-                {/*    onChangeText={() => {*/}
-                {/*    }}*/}
-                {/*    value={''}*/}
-                {/*    placeholder="Куда"*/}
 
-                {/*/>*/}
-                {/*<View style={styles.bottomContainer}>*/}
-                {/*    <TextInput*/}
-                {/*        style={{*/}
-                {/*            borderStyle: 'solid',*/}
-                {/*            width: 350,*/}
-                {/*            height: 38,*/}
-                {/*            backgroundColor: 'darkgrey',*/}
-                {/*            marginLeft: 20,*/}
-                {/*            marginTop: 5,*/}
-                {/*            alignItems: 'center'*/}
-                {/*        }}*/}
-                {/*        onChangeText={() => {*/}
-                {/*        }}*/}
-                {/*        value={''}*/}
-                {/*        placeholder="Дата"*/}
-
-                {/*    />*/}
-                {/*    <TextInput*/}
-                {/*        style={{*/}
-                {/*            borderStyle: 'solid',*/}
-                {/*            width: 350,*/}
-                {/*            height: 38,*/}
-                {/*            backgroundColor: 'darkgrey',*/}
-                {/*            marginLeft: 20,*/}
-                {/*            marginTop: 5,*/}
-                {/*            alignItems: 'center'*/}
-                {/*        }}*/}
-                {/*        onChangeText={() => {*/}
-                {/*        }}*/}
-                {/*        value={''}*/}
-                {/*        placeholder="Количество пассажиров"*/}
-
-                {/*    />*/}
-                {/*</View>*/}
                 <TouchableOpacity
                     style={{
                         alignItems: 'center',
